@@ -38,7 +38,7 @@ class PythonOrgSearch(unittest.TestCase):
             elem.send_keys(Keys.RETURN)            
             print "End Test - test_page_loads_Pass"
         except AssertionError:
-            repo.create_issue("test_page_loads_Pass","Error in 'test_page_loads_Pass'","TheDaw",milestone,label)
+            repo.create_issue("test_page_loads_Pass","Error in 'test_page_loads_Pass'","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_page_loads_Pass"
 
     def test_page_loads_IntentionalFail(self):
@@ -57,7 +57,7 @@ class PythonOrgSearch(unittest.TestCase):
             elem.send_keys(Keys.RETURN)            
             print "End Test - test_page_loads_IntentionalFail"
         except AssertionError:
-            repo.create_issue("test_page_loads_IntentionalFail","Error in 'test_page_loads_IntentionalFail' \n The url failed to load correctly.  \n \n *Auto Generated from Selenium","TheDaw",milestone,label)            
+            repo.create_issue("test_page_loads_IntentionalFail","Error in 'test_page_loads_IntentionalFail' \n The url failed to load correctly.  \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)            
             print "Issue logged for test - test_page_loads_IntentionalFail"
 
     def test_duck_fullValidation(self):
@@ -78,7 +78,7 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.ID, "search_button_homepage"))            
             print "End Test - test_duck_fullValidation"
         except AssertionError:
-            repo.create_issue("test_duck_fullValidation","Error in 'test_duck_fullValidation' \n \n *Auto Generated from Selenium","TheDaw",milestone,label)            
+            repo.create_issue("test_duck_fullValidation","Error in 'test_duck_fullValidation' \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)            
             print "Issue logged for test - test_duck_fullValidation"
 
     def test_duck_IncorrectSearchBarID(self):
@@ -99,7 +99,7 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.ID, "search_button_homepage"))            
             print "End Test - test_duck_IncorrectSearchBarID"
         except AssertionError:
-            repo.create_issue("test_duck_IncorrectSearchBarID","Error in 'test_duck_IncorrectSearchBarID' \n The search ID Bar has been changed \n \n *Auto Generated from Selenium","TheDaw",milestone,label)
+            repo.create_issue("test_duck_IncorrectSearchBarID","Error in 'test_duck_IncorrectSearchBarID' \n The search ID Bar has been changed \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_duck_IncorrectSearchBarID"
 
     def test_duck_buttonNotFound(self):
@@ -122,7 +122,7 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.ID, "search_button_homepage"))            
             print "End Test - test_duck_buttonNotFound"
         except AssertionError:
-            repo.create_issue("test_duck_buttonNotFound","Error in 'test_duck_buttonNotFound' \n Unable to locate search button \n \n *Auto Generated from Selenium","TheDaw",milestone,label)
+            repo.create_issue("test_duck_buttonNotFound","Error in 'test_duck_buttonNotFound' \n Unable to locate search button \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_duck_buttonNotFound"
 
     def test_duck_timeDelayedElement(self):
@@ -146,7 +146,7 @@ class PythonOrgSearch(unittest.TestCase):
             else: self.fail("time out")
             print "End Test - test_duck_timeDelayedElement"
         except AssertionError:
-            repo.create_issue("test_duck_timeDelayedElement","Error in 'test_duck_timeDelayedElement' \n \n *Auto Generated from Selenium","TheDaw",milestone,label)
+            repo.create_issue("test_duck_timeDelayedElement","Error in 'test_duck_timeDelayedElement' \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_duck_timeDelayedElement"
 
     def test_swrve_load(self):
@@ -161,15 +161,21 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.XPATH, "(//a[contains(text(),'Get Started Today')])[6]"))
             print "Click Get Started Today"
             driver.find_element_by_xpath("(//a[contains(text(),'Get Started Today')])[6]").click()
+            print "Type 'Test First' into 'FirstName'"
             driver.find_element_by_id("FirstName").send_keys("Test First")
+            print "Type 'Test Last' into 'LastName'"
             driver.find_element_by_id("LastName").send_keys("Test Last")
+            print "Type 'testemail@email.com' into 'Email'"
             driver.find_element_by_id("Email").send_keys("testemail@email.com")
+            print "Type '9876452100' into 'Phone'"
             driver.find_element_by_id("Phone").send_keys("9876452100")
+            print "Type 'Testing Company' into 'Company'"
             driver.find_element_by_id("Company").send_keys("Testing Company")
+            print "Click 'Swrve' Logo in the top left of the page"
             driver.find_element_by_css_selector("span.icon-swrve").click()        
             print "End Test - test_swrve_load"
         except AssertionError:
-            repo.create_issue("test_swrve_load","Error in test 'test_swrve_load' \n \n *Auto Generated from Selenium ","TheDaw",milestone,label)
+            repo.create_issue("test_swrve_load","Error in test 'test_swrve_load' \n \n *Auto Generated from Selenium ","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_swrve_load"
 
     def test_surveyMonkey_Form_CatchWarnings(self):
@@ -198,7 +204,7 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.ID, "submitform"))
             print "End Test - test_surveyMonkey_Form_CatchWarnings"
         except AssertionError:
-            repo.create_issue("test_surveyMonkey_Form_CatchWarnings","Error in 'test_surveyMonkey_Form_CatchWarnings' \n \n *Auto Generated from Selenium","TheDaw",milestone,label)
+            repo.create_issue("test_surveyMonkey_Form_CatchWarnings","Error in 'test_surveyMonkey_Form_CatchWarnings' \n \n *Auto Generated from Selenium","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_surveyMonkey_Form_CatchWarnings"
 
     def test_surveyMonkey_Form_ExpectedFailed(self):
@@ -227,7 +233,7 @@ class PythonOrgSearch(unittest.TestCase):
             self.assertTrue(self.is_element_present(By.ID, "create-title"))
             print "End Test - test_surveyMonkey_Form_ExpectedFailed"
         except AssertionError:
-            repo.create_issue("test_surveyMonkey_Form_ExpectedFailed","Error in 'test_surveyMonkey_Form_ExpectedFailed' \n Vould not locate the Creation Title \n \n *Auto Generated from Selenium ","TheDaw",milestone,label)
+            repo.create_issue("test_surveyMonkey_Form_ExpectedFailed","Error in 'test_surveyMonkey_Form_ExpectedFailed' \n Vould not locate the Creation Title \n \n *Auto Generated from Selenium ","JamesNolanTest",milestone,label)
             print "Issue logged for test - test_surveyMonkey_Form_ExpectedWarningsFailed"
 
     def is_element_present(self, how, what):
